@@ -15,10 +15,12 @@ import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
+import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.core.content.FileProvider
 
 import com.example.mlkit.databinding.ActivityImageHelperBinding
+import com.google.android.material.textview.MaterialTextView
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.label.ImageLabeler
 import com.google.mlkit.vision.label.ImageLabeling
@@ -42,7 +44,7 @@ open class ImageHelperActivity : AppCompatActivity() {
 
 
 
-    private lateinit var imageLabeler:ImageLabeler
+ /*   private lateinit var imageLabeler:ImageLabeler*/
 
 
 
@@ -52,7 +54,9 @@ open class ImageHelperActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityImageHelperBinding.inflate(layoutInflater)
         setContentView(binding.root)
+/*
         imageLabeler=ImageLabeling.getClient(ImageLabelerOptions.Builder().setConfidenceThreshold(0.7f).build())
+*/
         checkAndRequestPermissions()
         if (areAllPermissionsGranted()){
 
@@ -199,7 +203,7 @@ open class ImageHelperActivity : AppCompatActivity() {
         }
     }*/
     open fun runClassification(bitmap: Bitmap) {
-        val inputImage = InputImage.fromBitmap(bitmap, 0)
+       /* val inputImage = InputImage.fromBitmap(bitmap, 0)
         imageLabeler.process(inputImage)
             .addOnSuccessListener { imageLabels ->
                 Log.d(TAG, "runClassification: success")
@@ -218,7 +222,7 @@ open class ImageHelperActivity : AppCompatActivity() {
             .addOnFailureListener { e ->
                 Log.e(TAG, "runClassification: Failed to process image", e)
                 // Handle failure, e.g., show an error message
-            }
+            }*/
     }
 
     private fun onStartCamera(){
@@ -251,4 +255,11 @@ open class ImageHelperActivity : AppCompatActivity() {
     companion object{
         const val TAG="PRABHAT"
     }
+    open fun getOutputTextView(): MaterialTextView {
+        return binding.textViewOutput
+    }
+    open fun inputImageView(): ImageView {
+        return binding.imageView
+    }
+
 }
