@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MlKit"
         tools:targetApi="31">
         <activity
+            android:name=".helper.AudioHelperActivity"
+            android:exported="false" />
+        <activity
             android:name=".image.ImageClassificationActivity"
             android:exported="false" />
         <activity
@@ -28,6 +31,9 @@
             android:exported="false" />
         <activity
             android:name=".image.ObjectDetectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".image.FaceDetectionActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mlkit.databinding.ActivityMainBinding
 import com.example.mlkit.helper.ImageHelperActivity
+import com.example.mlkit.image.FaceDetectionActivity
 import com.example.mlkit.image.FlowerIdentificationActivity
 import com.example.mlkit.image.ImageActivity
 import com.example.mlkit.image.ImageClassificationActivity
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btn3.setOnClickListener {
             startActivity(Intent(this, ObjectDetectionActivity::class.java))
+        }
+        binding.btn4.setOnClickListener {
+            startActivity(Intent(this, FaceDetectionActivity::class.java))
         }
     }
 }
