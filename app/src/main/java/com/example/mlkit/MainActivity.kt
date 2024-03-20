@@ -8,6 +8,7 @@ import com.example.mlkit.helper.ImageHelperActivity
 import com.example.mlkit.image.FlowerIdentificationActivity
 import com.example.mlkit.image.ImageActivity
 import com.example.mlkit.image.ImageClassificationActivity
+import com.example.mlkit.image.ObjectDetectionActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -22,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btn2.setOnClickListener {
             startActivity(Intent(this, FlowerIdentificationActivity::class.java))
+        }
+        binding.btn3.setOnClickListener {
+            startActivity(Intent(this, ObjectDetectionActivity::class.java))
         }
     }
 }

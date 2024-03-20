@@ -51,5 +51,8 @@ dependencies {
     implementation ("com.google.mlkit:image-labeling:17.0.8")
     //custom classification
     implementation ("com.google.mlkit:image-labeling-custom:17.0.2")
+    //object detection
+    implementation ("com.google.mlkit:object-detection:17.0.1")
+
 
 }
