@@ -3,7 +3,9 @@ package com.example.mlkit
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mlkit.audio.AudioClassificationActivity
 import com.example.mlkit.databinding.ActivityMainBinding
+import com.example.mlkit.helper.AudioHelperActivity
 import com.example.mlkit.helper.ImageHelperActivity
 import com.example.mlkit.image.FaceDetectionActivity
 import com.example.mlkit.image.FlowerIdentificationActivity
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
         binding.btn.setOnClickListener {
             startActivity(Intent(this, ImageActivity::class.java))
         }
@@ -30,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btn4.setOnClickListener {
             startActivity(Intent(this, FaceDetectionActivity::class.java))
+        }
+        binding.btn5.setOnClickListener{
+            startActivity(Intent(this, AudioClassificationActivity::class.java))
         }
     }
 }

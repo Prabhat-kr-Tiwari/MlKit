@@ -57,5 +57,8 @@ dependencies {
     //face detection
     implementation("com.google.mlkit:face-detection:16.1.6")
 
+    //audio
+    implementation ("org.tensorflow:tensorflow-lite-task-audio:0.2.0")
+
 
 }
