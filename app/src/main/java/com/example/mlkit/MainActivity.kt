@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mlkit.audio.AudioClassificationActivity
+import com.example.mlkit.audio.BirdSoundIdentifierActivity
 import com.example.mlkit.databinding.ActivityMainBinding
 import com.example.mlkit.helper.AudioHelperActivity
 import com.example.mlkit.helper.ImageHelperActivity
@@ -36,6 +37,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btn5.setOnClickListener{
             startActivity(Intent(this, AudioClassificationActivity::class.java))
+        }
+        binding.btn6.setOnClickListener{
+            startActivity(Intent(this, BirdSoundIdentifierActivity::class.java))
         }
     }
 }

@@ -16,6 +16,7 @@
         android:theme="@style/Theme.MlKit"
         tools:targetApi="31">
         <activity android:name=".audio.AudioClassificationActivity"/>
+        <activity android:name=".audio.BirdSoundIdentifierActivity"/>
         <activity
             android:name=".helper.AudioHelperActivity"
             android:exported="false" />
