@@ -8,11 +8,13 @@ import com.example.mlkit.audio.BirdSoundIdentifierActivity
 import com.example.mlkit.databinding.ActivityMainBinding
 import com.example.mlkit.helper.AudioHelperActivity
 import com.example.mlkit.helper.ImageHelperActivity
+import com.example.mlkit.helper.TextHelperActivity
 import com.example.mlkit.image.FaceDetectionActivity
 import com.example.mlkit.image.FlowerIdentificationActivity
 import com.example.mlkit.image.ImageActivity
 import com.example.mlkit.image.ImageClassificationActivity
 import com.example.mlkit.image.ObjectDetectionActivity
+import com.example.mlkit.text.SpamDetectionActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -40,6 +42,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btn6.setOnClickListener{
             startActivity(Intent(this, BirdSoundIdentifierActivity::class.java))
+        }
+        binding.btn7.setOnClickListener{
+            startActivity(Intent(this, SpamDetectionActivity::class.java))
         }
     }
 }

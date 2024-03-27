@@ -59,6 +59,8 @@ dependencies {
 
     //audio
     implementation ("org.tensorflow:tensorflow-lite-task-audio:0.2.0")
+    //text
+    implementation ("org.tensorflow:tensorflow-lite-task-text:0.2.0")
 
 
 }
